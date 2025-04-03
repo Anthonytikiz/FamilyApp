@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile app specific styles */
+body {
+  @apply bg-gray-50 touch-manipulation;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Custom scrollbar for mobile */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+/* Bottom navigation styles */
+.bottom-nav-item {
+  @apply flex flex-col items-center justify-center flex-1 py-2 text-gray-500;
+}
+
+.bottom-nav-item.active {
+  @apply text-indigo-600;
+}
+
+.bottom-nav-item span {
+  @apply text-xs mt-1;
+}
+
+/* Smooth scrolling for family tree */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
